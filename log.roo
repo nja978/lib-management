@@ -1,0 +1,13 @@
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2019-08-01 15:01:03
+project --topLevelPackage com.library.management 
+jpa setup --provider HIBERNATE --database MYSQL 
+entity jpa --class com.library.management.Item --testAutomatically 
+field number --fieldName Id --type int 
+// Spring Roo 1.3.2.RELEASE [rev 8387857] log opened at 2019-08-01 15:24:15
+focus --class ~.Item
+field string --fieldName title --notNull --sizeMin 2 
+entity jpa --class com.library.management.Category
+field number --fieldName Id --type int
+field string --fieldName categoryName --notNull --sizeMin 2 
+focus --class ~.Item 
+field reference --fieldName category --type ~.Category
